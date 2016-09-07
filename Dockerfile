@@ -9,4 +9,4 @@ RUN  buildDeps=" \
     && docker-php-ext-install redis
 
 RUN git clone -b "0.3.2" https://github.com/piwik/plugin-QueuedTracking/ /var/www/html/plugins/QueuedTracking/ \
-    && php ../console plugin:activate QueuedTracking
+    && php /var/www/html/console plugin:activate QueuedTracking
